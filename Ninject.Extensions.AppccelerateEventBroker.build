@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project name="Ninject" default="build">
+  <property name="version" value="2.2.0.0" overwrite="true"/>
+  <property name="product.name" value="Ninject.Extensions.AppccelerateEventBroker" overwrite="false"/>
+  <property name="product.company" value="Ninject Project Contributors" overwrite="false"/>
+  <property name="product.duration" value="2009-2014" overwrite="false"/>
+  <property name="product.description" value="AppccelerateEventBroker Extension for Ninject" overwrite="false"/>
+  <property name="product.platforms" value="net-4.5"  overwrite="false"/>
+  <property name="product.buildserverPlatforms" value="net-4.5"  overwrite="false"/>
+  <property name="build.target" value="net-4.5" overwrite="false"/>
+  <property name="dependencies" value="Ninject,Ninject.Extensions.ContextPreservation,Ninject.Extensions.NamedScope"  overwrite="false"/>
+  <property name="build.platform" value="net-4.5" overwrite="true"/>
+
+  <include buildfile="Ninject.include" />
+  <target name="all" depends="core test"/>
+  <target name="nuget-all" depends="nuget"/>
+  
+  <target name="core" depends="init">
+    <property name="packagepath.eventBroker" value="Appccelerate.EventBroker.*/lib/net45"/>	
+    <property name="packagepath.appccelerateFundamentals" value="Appccelerate.Fundamentals.*/lib/portable-windows8+net45"/>
+    <copy todir="${current.path.build.lib}">
+      <fileset basedir="${path.packages}">
+		<include name="${packagepath.eventBroker}/*.dll"/>
+		<include name="${packagepath.eventBroker}/*.xml"/>
+		<include name="${packagepath.appccelerateFundamentals}/*.dll"/>
+		<include name="${packagepath.appccelerateFundamentals}/*.xml"/>
+      </fileset>
+    </copy>
+	
+	<property name="current.path.lib.eventBroker" value="${path.packages}/${packagepath.eventBroker}" />
+	<property name="current.path.lib.fundamentals" value="${path.packages}/${packagepath.appccelerateFundamentals}" />
+
+    <csc noconfig="true" warnaserror="true" target="library" debug="${build.debug}" optimize="${build.optimize}" define="${build.defines}" output="${current.path.build}/${product.assembly}" doc="${current.path.build}/${product.docfile}" keyfile="${path.src}/${product.keyfile}">
+      <arg line="/filealign:512" unless="${nant.settings.currentframework == 'mono-2.0'}"/>
+      <sources basedir="${path.src}">
+        <include name="${build.asminfo}"/>
+        <include name="${product.name}/**/*.cs"/>
+      </sources>
+      <references>
+        <include name="mscorlib.dll"/>
+        <include name="System.dll"/>
+        <include name="System.Core.dll"/>
+        <include name="${path.lib}/Ninject/${build.platform}/Ninject.dll"/>
+        <include name="${path.lib}/Ninject.Extensions.ContextPreservation/${build.platform}/Ninject.Extensions.ContextPreservation.dll"/>
+        <include name="${path.lib}/Ninject.Extensions.NamedScope/${build.platform}/Ninject.Extensions.NamedScope.dll"/>
+        <include name="${current.path.lib.eventBroker}/Appccelerate.EventBroker.dll"/>
+        <include name="${current.path.lib.fundamentals}/Appccelerate.Fundamentals.dll"/>
+      </references>
+    </csc>
+  </target>
+  
+  <target name="compile-tests" depends="core" unless="${skip.tests}">
+    <mkdir dir="${current.path.test}"/>
+    <call target="CopyDefaultTestInfrastructureAssemblies"/>
+    <csc noconfig="true" warnaserror="true" target="library" debug="${build.debug}" optimize="${build.optimize}" define="${build.defines}"
+     output="${current.path.test}/${product.assembly.test}">
+      <sources basedir="${path.src}">
+        <include name="${product.name}.Test/**/*.cs"/>
+      </sources>
+      <references basedir="${current.path.test}">
+        <include name="mscorlib.dll"/>
+        <include name="System.dll"/>
+        <include name="System.Core.dll"/>
+        <include name="System.Xml.dll" />
+        <include name="System.Xml.Linq.dll" />
+        <include name="xunit.dll"/>
+        <include name="FluentAssertions.dll"/>
+        <include name="${product.assembly}"/>
+        <include name="${path.lib}/Ninject/${build.platform}/Ninject.dll"/>
+        <include name="${path.lib}/Ninject.Extensions.ContextPreservation/${build.platform}/Ninject.Extensions.ContextPreservation.dll"/>
+        <include name="${path.lib}/Ninject.Extensions.NamedScope/${build.platform}/Ninject.Extensions.NamedScope.dll"/>
+        <include name="${current.path.lib.eventBroker}/Appccelerate.EventBroker.dll"/>
+        <include name="${current.path.lib.fundamentals}/Appccelerate.Fundamentals.dll"/>
+      </references>
+      <nowarn>
+        <warning number="1584"/>
+      </nowarn>
+    </csc>
+
+  </target>
+  
+  <target name="compile-silverlight-tests"/>
+</project>

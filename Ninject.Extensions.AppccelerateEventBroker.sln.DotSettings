@@ -1,0 +1,63 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeStyle/FileHeader/FileHeaderText/@EntryValue">//-------------------------------------------------------------------------------&#xD;
+// &lt;copyright file="$fileName$" company="Ninject Project Contributors"&gt;&#xD;
+//   Copyright (c) 2009-$year$ Ninject Project Contributors&#xD;
+//   &#xD;
+//   Dual-licensed under the Apache License, Version 2.0, and the Microsoft Public License (Ms-PL).&#xD;
+//   You may not use this file except in compliance with one of the Licenses.&#xD;
+//   You may obtain a copy of the License at&#xD;
+//&#xD;
+//       http://www.apache.org/licenses/LICENSE-2.0&#xD;
+//   or&#xD;
+//       http://www.microsoft.com/opensource/licenses.mspx&#xD;
+//&#xD;
+//   Unless required by applicable law or agreed to in writing, software&#xD;
+//   distributed under the License is distributed on an "AS IS" BASIS,&#xD;
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xD;
+//   See the License for the specific language governing permissions and&#xD;
+//   limitations under the License.&#xD;
+// &lt;/copyright&gt;&#xD;
+// &lt;Authors&gt;&#xD;
+// &#xD;
+// &lt;/Authors&gt;&#xD;
+//-------------------------------------------------------------------------------</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=author/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=author/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=fileName/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=fileName/Expression/@EntryValue">getFileName()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=fileName/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=fileName/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=year/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=year/Expression/@EntryValue">getCurrentDate("yyyy")</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=year/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Field/=year/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Shortcut/@EntryValue">fhdr</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Description/@EntryValue">Add file header</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/Type/@EntryValue">Everywhere</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0B817F9AF6BDEF4A809E5E8781A20944/Text/@EntryValue">//-------------------------------------------------------------------------------&#xD;
+// &lt;copyright file="$fileName$" company="Ninject Project Contributors"&gt;&#xD;
+//   Copyright (c) 2009-$year$ Ninject Project Contributors&#xD;
+//   &#xD;
+//   Dual-licensed under the Apache License, Version 2.0, and the Microsoft Public License (Ms-PL).&#xD;
+//   You may not use this file except in compliance with one of the Licenses.&#xD;
+//   You may obtain a copy of the License at&#xD;
+//   &#xD;
+//       http://www.apache.org/licenses/LICENSE-2.0&#xD;
+//   or&#xD;
+//       http://www.microsoft.com/opensource/licenses.mspx&#xD;
+//   &#xD;
+//   Unless required by applicable law or agreed to in writing, software&#xD;
+//   distributed under the License is distributed on an "AS IS" BASIS,&#xD;
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xD;
+//   See the License for the specific language governing permissions and&#xD;
+//   limitations under the License.&#xD;
+// &lt;/copyright&gt;&#xD;
+// &lt;Authors&gt;&#xD;
+//   $author$&#xD;
+// &lt;/Authors&gt;&#xD;
+//-------------------------------------------------------------------------------</s:String></wpf:ResourceDictionary>

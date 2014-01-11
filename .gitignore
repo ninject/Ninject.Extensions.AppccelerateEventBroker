@@ -1,0 +1,18 @@
+/build/*
+/dist/*
+obj
+Bin
+*.user
+*.suo
+*.dotCover
+_ReSharper.Ninject.Extensions.AppccelerateEventBroker
+_ReSharper.Ninject.Extensions.AppccelerateEventBroker with Silverlight and WP7 Unittesting
+/lib/Ninject/*.zip
+/lib/Ninject/*/**
+/lib/Ninject.Extensions.ContextPreservation/*.zip
+/lib/Ninject.Extensions.ContextPreservation/*/**
+/lib/Ninject.Extensions.NamedScope/*.zip
+/lib/Ninject.Extensions.NamedScope/*/**
+RevisionNr.tmp
+**/StyleCop.Cache
+packages
