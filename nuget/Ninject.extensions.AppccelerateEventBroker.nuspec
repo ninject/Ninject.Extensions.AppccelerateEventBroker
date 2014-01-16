@@ -13,7 +13,7 @@
       <dependency id="Ninject" version="" />
       <dependency id="Ninject.Extensions.ContextPreservation" version="" />
       <dependency id="Ninject.Extensions.NamedScope" version="" />
-      <dependency id="Appccelerate.EventBroker" version="[3.0.0.0,4.0.0.0)" />
+      <dependency id="Appccelerate.EventBroker" version="[3.1.0.0,4.0.0.0)" />
     </dependencies> 
   </metadata>
 </package>
