@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninject.Extensions.AppccelerateEventBroker", "src\Ninject.Extensions.AppccelerateEventBroker\Ninject.Extensions.AppccelerateEventBroker.csproj", "{3A773D43-270F-40C8-B419-044DAA4B5D8A}"
 EndProject
