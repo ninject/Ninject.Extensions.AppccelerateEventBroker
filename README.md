@@ -1,8 +1,8 @@
 # Ninject.Extensions.AppccelerateEventBroker [![NuGet Version](http://img.shields.io/nuget/v/Ninject.Extensions.AppccelerateEventBroker.svg?style=flat)](https://www.nuget.org/packages/Ninject.Extensions.AppccelerateEventBroker/) [![NuGet Downloads](http://img.shields.io/nuget/dt/Ninject.Extensions.AppccelerateEventBroker.svg?style=flat)](https://www.nuget.org/packages/Ninject.Extensions.AppccelerateEventBroker/)
-This extension adds support for **Appccelerate.EventBroker**. This is a component that allows 
-communication between components using events without knowing each other directly to
-register these events themselves. See http://www.appccelerate.com/eventbroker.html.
-It requires **Ninject.Extensions.NamedScope** and **Ninject.Extensions.ContextPreservation**.
+This extension adds support for [Appccelerate.EventBroker](http://www.appccelerate.com/eventbroker.html). 
+This is a component that allows communication between components using events 
+without knowing each other directly to register these events themselves.
+It requires [Ninject.Extensions.NamedScope](https://github.com/ninject/Ninject.Extensions.NamedScope) and [Ninject.Extensions.ContextPreservation](https://github.com/ninject/Ninject.Extensions.ContextPreservation).
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ event broker so that the communication is separated from the first set of object
 
 Example:
 ```C#
-const string EventBrokerName = "LocalEB1";
+const string EventBrokerName = "LocalEventBroker";
 
 this.kernel.Bind<Parent>().ToSelf().OwnsEventBroker(EventBrokerName);
 this.kernel.Bind<Component1>().ToSelf().RegisterOnGlobalBroker(EventBrokerName);
@@ -42,7 +42,7 @@ var parent1 = this.kernel.Get<Parent>();
 var parent2 = this.kernel.Get<Parent>();
 ```
 
-In this case if parent1's component1 fires an event it will be receives by 
+In this case if `parent1`'s `component1` fires an event it will be receives by 
 `parent1.component2` but not `parent2.component2` or `parent2.component1`
 
 Furthermore its possible to inject the event broker to the created instances in case you
