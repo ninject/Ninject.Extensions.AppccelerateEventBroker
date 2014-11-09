@@ -5,8 +5,9 @@
     <version></version>
     <authors>Ninject Project Contributors</authors>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-	<licenseUrl>https://github.com/ninject/ninject.extensions.AppccelerateEventBroker/raw/master/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/ninject/ninject.extensions.AppccelerateEventBroker/raw/master/LICENSE.txt</licenseUrl>
     <description>Ninject extension which adds support for Appccelerate.EventBroker</description>
+    <releaseNotes>https://github.com/ninject/Ninject.Extensions.AppccelerateEventBroker/blob/master/ReleaseNotes.md</releaseNotes>
     <summary></summary>
     <language>en-US</language>
     <dependencies>
@@ -14,6 +15,6 @@
       <dependency id="Ninject.Extensions.ContextPreservation" version="" />
       <dependency id="Ninject.Extensions.NamedScope" version="" />
       <dependency id="Appccelerate.EventBroker" version="[3.1.0.0,4.0.0.0)" />
-    </dependencies> 
+    </dependencies>
   </metadata>
 </package>
