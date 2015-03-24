@@ -65,11 +65,13 @@
     <AssemblyOriginatorKeyFile>..\Ninject.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Appccelerate.EventBroker">
-      <HintPath>..\..\packages\Appccelerate.EventBroker.3.9.0\lib\net45\Appccelerate.EventBroker.dll</HintPath>
+    <Reference Include="Appccelerate.EventBroker, Version=3.15.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Appccelerate.EventBroker.3.15.0\lib\net45\Appccelerate.EventBroker.dll</HintPath>
     </Reference>
-    <Reference Include="Appccelerate.Fundamentals">
-      <HintPath>..\..\packages\Appccelerate.Fundamentals.2.7.0\lib\portable-windows8+net45\Appccelerate.Fundamentals.dll</HintPath>
+    <Reference Include="Appccelerate.Fundamentals, Version=2.8.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Appccelerate.Fundamentals.2.8.0\lib\portable-windows8+net45\Appccelerate.Fundamentals.dll</HintPath>
     </Reference>
     <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
